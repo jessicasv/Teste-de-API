@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstore.Pet" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-08T17:30:16" hostname="IBM-3XD85M3" time="3.076">
+<testsuite name="petstore.Pet" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-08T18:26:20" hostname="IBM-3XD85M3" time="3.489">
   <properties/>
-  <testcase name="incluirPet" classname="petstore.Pet" time="3.076"/>
-  <system-out><![CDATA[Request method:	POST
-Request URI:	https://petstore.swagger.io/v2/pet
+  <testcase name="consultarPet" classname="petstore.Pet" time="3.489"/>
+  <system-out><![CDATA[Request method:	GET
+Request URI:	https://petstore.swagger.io/v2/pet/2022090801
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -13,27 +13,9 @@ Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
-Body:
-{
-    "id": 2022090800,
-    "category": {
-        "id": 1,
-        "name": "cat"
-    },
-    "name": "Loki",
-    "photoUrls": [
-        "string"
-    ],
-    "tags": [
-        {
-            "id": 2022,
-            "name": "sta"
-        }
-    ],
-    "status": "available"
-}
+Body:			<none>
 HTTP/1.1 200 OK
-Date: Thu, 08 Sep 2022 17:30:14 GMT
+Date: Thu, 08 Sep 2022 18:26:19 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -43,7 +25,7 @@ Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 Server: Jetty(9.2.9.v20150224)
 
 {
-    "id": 2022090800,
+    "id": 2022090801,
     "category": {
         "id": 1,
         "name": "cat"
@@ -60,6 +42,7 @@ Server: Jetty(9.2.9.v20150224)
     ],
     "status": "available"
 }
+Categoria: cat
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

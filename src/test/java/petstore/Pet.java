@@ -19,7 +19,7 @@ public class Pet {
         return new String(Files.readAllBytes(Paths.get(caminhoJson)));
     }
 
-    @Test //identifica o metodo ou funcao como teste p/ o testng
+    @Test (priority = 1)//identifica o metodo ou funcao como teste p/ o testng
     public void incluirPet() throws IOException {
         String jsonBody = lerJson("db/pet1.json");
 
@@ -43,6 +43,35 @@ public class Pet {
                 .body("category.name", is("cat"))
                 .body("tags.name", contains("sta"))
         ; //toda essa estrutura esta em uma linha, por isso fecha aqui
+    }
+
+    @Test (priority = 2)
+    public void consultarPet(){
+
+        String petId = "2022090801";
+
+        String nomeCategoria = //variavel pra armazenar o nome da categoria no exemplo de extracao
+
+        given()
+                .contentType("application/json")
+                .log().all()
+
+        .when()
+               // .get(uri + "/" + petId) assim nao funcionou...
+                .get("https://petstore.swagger.io/v2/pet/2022090801\n")
+
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("name", is("Loki"))
+                .body("category.name", is("cat"))
+                .body("status", is("available"))
+        .extract() //exemplo de como extrair algo especifico
+                .path("category.name")
+        ;
+
+        System.out.println("Categoria: " + nomeCategoria); //exibir o dado extraido
+
     }
 
 }
