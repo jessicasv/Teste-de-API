@@ -1,8 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstore.Pet" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-08T18:26:20" hostname="IBM-3XD85M3" time="3.489">
+<testsuite name="petstore.Pet" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-09-08T18:56:18" hostname="IBM-3XD85M3" time="6.648">
   <properties/>
-  <testcase name="consultarPet" classname="petstore.Pet" time="3.489"/>
-  <system-out><![CDATA[Request method:	GET
+  <testcase name="incluirPet" classname="petstore.Pet" time="3.386"/>
+  <testcase name="consultarPet" classname="petstore.Pet" time="1.095"/>
+  <testcase name="alterarPet" classname="petstore.Pet" time="1.23"/>
+  <testcase name="excluirPet" classname="petstore.Pet" time="0.932"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://petstore.swagger.io/v2/pet
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 2022090801,
+    "category": {
+        "id": 1,
+        "name": "cat"
+    },
+    "name": "Loki",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 2022,
+            "name": "sta"
+        }
+    ],
+    "status": "available"
+}
+HTTP/1.1 200 OK
+Date: Thu, 08 Sep 2022 18:56:17 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 2022090801,
+    "category": {
+        "id": 1,
+        "name": "cat"
+    },
+    "name": "Loki",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 2022,
+            "name": "sta"
+        }
+    ],
+    "status": "available"
+}
+Request method:	GET
 Request URI:	https://petstore.swagger.io/v2/pet/2022090801
 Proxy:			<none>
 Request params:	<none>
@@ -15,7 +76,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Thu, 08 Sep 2022 18:26:19 GMT
+Date: Thu, 08 Sep 2022 18:56:19 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -43,6 +104,91 @@ Server: Jetty(9.2.9.v20150224)
     "status": "available"
 }
 Categoria: cat
+Request method:	PUT
+Request URI:	https://petstore.swagger.io/v2/pet
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 2022090801,
+    "category": {
+        "id": 1,
+        "name": "cat"
+    },
+    "name": "Loki",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 2022,
+            "name": "sta"
+        }
+    ],
+    "status": "adopted"
+}
+HTTP/1.1 200 OK
+Date: Thu, 08 Sep 2022 18:56:20 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 2022090801,
+    "category": {
+        "id": 1,
+        "name": "cat"
+    },
+    "name": "Loki",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 2022,
+            "name": "sta"
+        }
+    ],
+    "status": "adopted"
+}
+Request method:	DELETE
+Request URI:	https://petstore.swagger.io/v2/pet/2022090801
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Thu, 08 Sep 2022 18:56:21 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "2022090801"
+}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

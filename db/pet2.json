@@ -1,0 +1,18 @@
+{
+  "id": 2022090801,
+  "category": {
+    "id": 1,
+    "name": "cat"
+  },
+  "name": "Loki",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 2022,
+      "name": "sta"
+    }
+  ],
+  "status": "adopted"
+}

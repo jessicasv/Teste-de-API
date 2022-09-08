@@ -74,4 +74,46 @@ public class Pet {
 
     }
 
+    @Test (priority = 3)
+    public void alterarPet() throws IOException {
+
+        String jsonBody = lerJson("db/pet2.json");
+
+        given()
+                .contentType("application/json")
+                .log().all()
+                .body(jsonBody)
+        .when()
+                .put(uri)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("name", is("Loki"))
+                .body("status", is("adopted"))
+        ;
+
+    }
+
+    @Test(priority = 4)
+    public void excluirPet(){
+
+        String petId = "2022090801";
+
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                //.delete(uri + "/" + petId) nao consigo usar desse jeito :(
+                .delete("https://petstore.swagger.io/v2/pet/2022090801\n")
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("code", is(200))
+                .body("type", is("unknown"))
+                .body("message", is(petId))
+        ;
+
+
+    }
+
 }
